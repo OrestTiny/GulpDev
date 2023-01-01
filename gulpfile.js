@@ -76,7 +76,7 @@ gulp.task("sass", function () {
     .pipe(size());
 });
 
-gulp.task("sass_widget", function () {
+gulp.task("sass-widget", function () {
   return gulp
     .src("./THEME_NAME/widgets/**/*.scss")
     .pipe(sourcemaps.init())
@@ -110,7 +110,7 @@ gulp.task("watch", function () {
     ["./THEME_NAME/widgets/**/*.js", "!./THEME_NAME/widgets/**/*.min.js"],
     gulp.series("widgets-scripts")
   );
-  gulp.watch("./THEME_NAME/widgets/**/*.scss", gulp.series("sass_widget"));
+  gulp.watch("./THEME_NAME/widgets/**/*.scss", gulp.series("sass-widget"));
   gulp.watch(
     ["./THEME_NAME/assets/js/**/*.js", "!./THEME_NAME/assets/js/**/*.min.js"],
     gulp.series("scripts")
